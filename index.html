@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="pt-BR" prefix="og: http://ogp.me/ns#">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+    <title>Camila Rocha | Personal Training Premium</title>
+    <meta name="description" content="Consultoria fitness de alto padrão com Camila Rocha. Treinos personalizados focados em emagrecimento, hipertrofia e estética feminina e masculina.">
+    <meta name="keywords" content="personal trainer, camila rocha, consultoria fitness, treino online, treino presencial, hipertrofia, emagrecimento, estética, fitness premium">
+    <meta name="author" content="Coutinho Tech">
+    <meta name="robots" content="index, follow">
+
+    <meta name="theme-color" content="#0a0a0a">
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Camila Rocha">
+
+    <meta property="og:title" content="Camila Rocha | Personal Training Premium">
+    <meta property="og:description" content="Transforme seu corpo com uma metodologia exclusiva e focada nos seus resultados.">
+    <meta property="og:image" content="logo.jpeg">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="pt_BR">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HealthAndBeautyBusiness",
+      "name": "Camila Rocha Personal Training",
+      "image": "logo.jpeg",
+      "description": "Consultoria fitness online e presencial de alto padrão.",
+      "telephone": "+5551981029643",
+      "priceRange": "$$$",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "BR"
+      }
+    }
+    </script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,600;0,800;1,600&display=swap" rel="stylesheet">
+
+    <style>
+        /* --- PALETA DE CORES "PREMIUM GOLD" --- */
+        :root {
+            --cr-black: #050505;
+            --cr-dark: #121212;
+            --cr-gold: #C8B28B; 
+            --cr-gold-light: #E0CEB1;
+            --cr-gold-dark: #9A835C;
+            --cr-white: #ffffff;
+            --cr-gray: #888888;
+            
+            --action-gradient: linear-gradient(135deg, var(--cr-gold-light) 0%, var(--cr-gold-dark) 100%);
+            
+            --bg-overlay: rgba(5, 5, 5, 0.92);
+            --bg-card: rgba(18, 18, 18, 0.85);
+            --text-main: var(--cr-white);
+            --border-glass: rgba(200, 178, 139, 0.25);
+            --shadow-glass: 0 20px 40px rgba(0, 0, 0, 0.8);
+            --btn-bg: rgba(200, 178, 139, 0.08);
+            --input-bg: rgba(0, 0, 0, 0.5);
+            
+            --font-title: 'Playfair Display', serif;
+            --font-body: 'Montserrat', sans-serif;
+        }
+
+        /* Light Theme */
+        body.light-theme {
+            --bg-overlay: rgba(250, 248, 245, 0.95);
+            --bg-card: rgba(255, 255, 255, 0.95);
+            --text-main: var(--cr-black);
+            --cr-gray: #666666;
+            --border-glass: rgba(0, 0, 0, 0.08);
+            --btn-bg: rgba(0, 0, 0, 0.03);
+            --input-bg: rgba(245, 245, 245, 1);
+            --shadow-glass: 0 15px 35px rgba(0, 0, 0, 0.08);
+        }
+
+        /* --- RESET E OTIMIZAÇÕES --- */
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: var(--font-body); -webkit-tap-highlight-color: transparent; transition: all 0.3s ease; }
+        a { text-decoration: none !important; color: inherit; }
+        html { scroll-behavior: smooth; }
+
+        body {
+            background-image: url('https://images.unsplash.com/photo-1540497077202-7c8a3999166f?q=80&w=2070&auto=format&fit=crop'); 
+            background-size: cover; background-position: center; background-attachment: fixed;
+            min-height: 100vh; 
+            min-height: 100dvh; 
+            display: flex; justify-content: center; align-items: center;
+            color: var(--text-main); padding: 30px 15px; overflow-x: hidden; position: relative;
+        }
+        body::before {
+            content: ''; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: var(--bg-overlay); z-index: -1; 
+            backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); 
+        }
+
+        /* --- CARD PRINCIPAL --- */
+        .glass-card {
+            width: 100%; max-width: 460px; position: relative;
+            background: var(--bg-card); 
+            backdrop-filter: blur(25px); -webkit-backdrop-filter: blur(25px);
+            border: 1px solid var(--border-glass); box-shadow: var(--shadow-glass);
+            border-radius: 35px; padding: 45px 25px; text-align: center;
+            overflow: hidden; z-index: 1;
+        }
+
+        .theme-toggle {
+            position: absolute; top: 25px; right: 25px;
+            background: var(--btn-bg); border: 1px solid var(--border-glass);
+            color: var(--cr-gold); width: 42px; height: 42px; border-radius: 50%;
+            display: flex; align-items: center; justify-content: center; cursor: pointer; z-index: 10;
+        }
+
+        /* --- PERFIL --- */
+        .profile-img-top {
+            width: 140px; height: 140px; object-fit: cover;
+            border-radius: 50%; background: #000; 
+            border: 2px solid var(--cr-gold);
+            box-shadow: 0 0 25px rgba(200, 178, 139, 0.2); margin-bottom: 25px;
+        }
+        
+        h1 { font-family: var(--font-title); font-size: 2rem; font-weight: 800; margin-bottom: 5px; color: var(--cr-gold); letter-spacing: 0.5px; }
+        h2 { font-size: 0.75rem; font-weight: 600; color: var(--text-main); letter-spacing: 4px; text-transform: uppercase; margin-bottom: 20px; opacity: 0.9; }
+        .bio-text { font-size: 0.9rem; color: var(--cr-gray); max-width: 95%; margin: 0 auto 35px auto; line-height: 1.6; font-weight: 300; }
+
+        /* --- BOTÕES TOPO --- */
+        .action-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 40px; }
+        .btn-action {
+            background: var(--btn-bg); border: 1px solid var(--border-glass); border-radius: 20px; padding: 16px;
+            display: flex; flex-direction: column; align-items: center; gap: 10px; transition: 0.4s;
+        }
+        .btn-action:hover { background: var(--action-gradient); border-color: transparent; transform: translateY(-3px); box-shadow: 0 10px 20px rgba(200, 178, 139, 0.2); }
+        .btn-action i { font-size: 1.4rem; color: var(--cr-gold); }
+        .btn-action span { font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;}
+        .btn-action:hover i, .btn-action:hover span { color: var(--cr-black); }
+
+        /* --- SEÇÕES GERAIS --- */
+        .section-header { text-align: left; margin: 35px 0 20px 0; padding-left: 15px; border-left: 3px solid var(--cr-gold); display: flex; justify-content: space-between; align-items: center; }
+        .section-header h3 { font-family: var(--font-title); font-size: 1.5rem; color: var(--text-main); font-weight: 600; font-style: italic; }
+        
+        .carousel-container { position: relative; width: 100%; margin-bottom: 15px; }
+        .carousel-track-manual { 
+            display: flex; gap: 15px; overflow-x: auto; scroll-behavior: smooth; 
+            padding-top: 25px; padding-bottom: 15px; 
+            scrollbar-width: none; -webkit-overflow-scrolling: touch; 
+        }
+        .carousel-track-manual::-webkit-scrollbar { display: none; }
+
+        /* --- SOBRE (ELEGÂNCIA) --- */
+        .about-card {
+            background: var(--btn-bg); border: 1px solid var(--border-glass);
+            border-radius: 25px; padding: 35px 25px; text-align: center; margin-bottom: 20px;
+            position: relative; overflow: hidden; display: flex; flex-direction: column; align-items: center; gap: 20px;
+        }
+        .about-card::before {
+            content: '"'; position: absolute; top: -10px; right: 25px;
+            font-family: var(--font-title); font-size: 6rem; color: var(--cr-gold); opacity: 0.1;
+        }
+        .about-profile-pic { width: 100px; height: 100px; border-radius: 50%; object-fit: cover; border: 2px solid var(--cr-gold); }
+        .about-text { font-size: 0.85rem; color: var(--cr-gray); line-height: 1.7; margin-bottom: 10px; font-weight: 300; }
+        .about-highlight { color: var(--cr-gold); font-weight: 600; }
+        
+        .about-stats { display: flex; gap: 30px; margin-top: 10px; justify-content: center; }
+        .stat-item { text-align: center; }
+        .stat-number { font-size: 1.3rem; font-weight: 600; color: var(--text-main); font-family: var(--font-title); }
+        .stat-label { font-size: 0.6rem; text-transform: uppercase; color: var(--cr-gray); letter-spacing: 1px; }
+
+        /* --- PLANOS --- */
+        .plan-category-title {
+            font-family: var(--font-title); font-size: 1.2rem; color: var(--cr-gold);
+            margin: 0 0 5px 15px; text-align: left; font-weight: 600; font-style: italic;
+        }
+
+        .plan-card {
+            min-width: 230px; min-height: 310px; background: var(--bg-card); border: 1px solid var(--border-glass); 
+            border-radius: 25px; padding: 25px 20px; text-align: center; flex-shrink: 0;
+            display: flex; flex-direction: column; justify-content: space-between; position: relative; transition: 0.4s;
+        }
+        .plan-card.featured { transform: scale(1.02); background: linear-gradient(180deg, rgba(200, 178, 139, 0.08) 0%, var(--bg-card) 100%); }
+        .plan-badge {
+            position: absolute; top: 0; left: 50%; transform: translate(-50%, -50%);
+            background: var(--action-gradient); color: var(--cr-black);
+            padding: 5px 15px; font-size: 0.65rem; font-weight: 700; text-transform: uppercase; border-radius: 20px; letter-spacing: 1px;
+        }
+        .plan-title { font-family: var(--font-title); font-size: 1.4rem; color: var(--text-main); margin-bottom: 5px; font-weight: 600; }
+        .plan-price { font-size: 1.6rem; font-weight: 700; color: var(--cr-gold); margin-bottom: 5px; }
+        .plan-price span { font-size: 0.75rem; font-weight: 400; color: var(--cr-gray); }
+        
+        /* BADGE DE GÊNERO (NOVO) */
+        .gender-badge {
+            font-size: 0.6rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;
+            padding: 3px 12px; border-radius: 15px; display: inline-block; margin-bottom: 15px;
+        }
+        .gender-both {
+            border: 1px solid var(--border-glass); color: var(--cr-gray);
+        }
+        .gender-women {
+            background: var(--action-gradient); color: var(--cr-black); box-shadow: 0 2px 10px rgba(200, 178, 139, 0.2);
+        }
+        body.light-theme .gender-both { border-color: rgba(0,0,0,0.2); color: #666; }
+
+        .plan-features { list-style: none; padding: 0; margin-bottom: 20px; text-align: left; font-size: 0.8rem; color: var(--cr-gray); line-height: 1.5; font-weight: 300; }
+        .plan-features li { margin-bottom: 6px; display: flex; align-items: center; gap: 8px; }
+        .plan-features li i { color: var(--cr-gold); font-size: 0.7rem; }
+        
+        .plan-btn {
+            background: transparent; border: 1px solid var(--cr-gold); color: var(--text-main);
+            padding: 12px; width: 100%; border-radius: 12px; font-weight: 600; text-transform: uppercase; font-size: 0.75rem; cursor: pointer; letter-spacing: 1px;
+            -webkit-appearance: none; appearance: none; transition: 0.3s;
+        }
+        .plan-btn:hover { background: var(--action-gradient); color: var(--cr-black); border-color: transparent; transform: translateY(-3px); box-shadow: 0 8px 20px rgba(200, 178, 139, 0.3); }
+        .plan-card.featured .plan-btn { background: var(--action-gradient); color: var(--cr-black); border-color: transparent; }
+        .plan-card.featured .plan-btn:hover { transform: translateY(-3px); box-shadow: 0 8px 20px rgba(200, 178, 139, 0.3); }
+
+        .plans-cta-footer { margin-top: 15px; margin-bottom: 30px; }
+        .link-cta { color: var(--cr-gold); font-size: 0.8rem; font-weight: 600; text-transform: uppercase; border-bottom: 1px dashed var(--cr-gold); padding-bottom: 2px; }
+
+        /* --- TABELA DE LOCAIS E VALORES --- */
+        .location-card {
+            background: var(--btn-bg); border: 1px solid var(--border-glass); border-radius: 20px;
+            padding: 25px 15px; margin-bottom: 20px;
+        }
+        .location-title {
+            font-family: var(--font-title); font-size: 1.2rem; color: var(--cr-gold);
+            margin-bottom: 20px; text-align: center; font-weight: 600; letter-spacing: 0.5px;
+        }
+        .price-table { width: 100%; border-collapse: collapse; font-size: 0.75rem; color: var(--text-main); }
+        .price-table th { color: var(--cr-gray); font-weight: 600; text-transform: uppercase; padding-bottom: 12px; border-bottom: 1px solid var(--border-glass); text-align: center; letter-spacing: 0.5px; }
+        .price-table td { padding: 15px 5px; border-bottom: 1px dashed rgba(200, 178, 139, 0.15); text-align: center; font-weight: 400; vertical-align: middle; }
+        .price-table tr:last-child td { border-bottom: none; padding-bottom: 5px; }
+        .highlight-price { color: var(--cr-gold); font-weight: 700; font-size: 0.9rem; }
+
+        /* Cards de Resultados */
+        .result-card { min-width: 250px; height: 340px; border-radius: 25px; overflow: hidden; position: relative; border: 1px solid var(--border-glass); flex-shrink: 0; background: #000; }
+        .result-card img { width: 100%; height: 100%; object-fit: cover; opacity: 0.85; transition: 0.5s; filter: grayscale(20%); }
+        .result-card:hover img { transform: scale(1.05); opacity: 1; filter: grayscale(0%); }
+        .result-overlay { position: absolute; bottom: 0; left: 0; width: 100%; background: linear-gradient(to top, rgba(0,0,0,0.95), transparent); padding: 25px 20px 20px; text-align: left; }
+        .result-badge { background: var(--action-gradient); color: var(--cr-black); padding: 4px 12px; border-radius: 6px; font-weight: 700; font-size: 0.65rem; text-transform: uppercase; display: inline-block; margin-bottom: 8px; }
+        .result-desc { font-size: 0.85rem; color: var(--cr-white); font-weight: 400; line-height: 1.4; }
+
+        /* --- FEEDBACK --- */
+        .carousel-wrapper-auto { overflow: hidden; margin-bottom: 20px; mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent); -webkit-mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent); }
+        .carousel-track-feedback { display: flex; gap: 15px; width: max-content; animation: scrollInfinite 40s linear infinite; }
+        .feedback-card { width: 280px; background: var(--bg-card); border: 1px solid var(--border-glass); border-radius: 20px; padding: 25px; text-align: left; flex-shrink: 0; }
+        .stars { color: var(--cr-gold); font-size: 0.75rem; margin-bottom: 10px; }
+        .feedback-text { font-size: 0.85rem; font-style: italic; color: var(--cr-gray); margin-bottom: 15px; line-height: 1.6; font-weight: 300; }
+        .feedback-author { font-family: var(--font-title); font-size: 0.9rem; font-weight: 600; color: var(--text-main); display: flex; align-items: center; gap: 8px; }
+
+        @keyframes scrollInfinite { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+
+        /* --- FORMULÁRIO --- */
+        .schedule-form { background: var(--bg-card); border: 1px solid var(--border-glass); border-radius: 30px; padding: 35px 25px; margin-bottom: 35px; text-align: left; }
+        .form-group { margin-bottom: 18px; }
+        .form-label { display: block; font-size: 0.7rem; color: var(--cr-gold); margin-bottom: 8px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; }
+        
+        .form-input, .form-select, textarea.form-input { 
+            width: 100%; padding: 15px; border-radius: 12px; border: 1px solid var(--border-glass); 
+            background: var(--input-bg); color: var(--text-main); font-size: 0.9rem; font-weight: 400; outline: none; 
+            -webkit-appearance: none; appearance: none;
+        }
+        /* Para os optgroups no select ficarem legíveis no dark mode */
+        select optgroup { background: var(--cr-dark); color: var(--cr-gold); font-weight: 700; }
+        select option { background: var(--cr-dark); color: var(--text-main); }
+        
+        textarea.form-input { resize: none; height: 90px; }
+        .form-input:focus, .form-select:focus, textarea.form-input:focus { border-color: var(--cr-gold); background: rgba(0,0,0,0.7); }
+        .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+        
+        .btn-schedule { 
+            width: 100%; background: var(--action-gradient); color: var(--cr-black); font-weight: 700; padding: 18px; border: none; border-radius: 50px; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 1px; cursor: pointer; margin-top: 15px; box-shadow: 0 5px 25px rgba(200, 178, 139, 0.2); display: flex; align-items: center; justify-content: center; gap: 10px;
+            -webkit-appearance: none; appearance: none;
+        }
+        .btn-schedule:hover { transform: scale(1.02); filter: brightness(1.1); box-shadow: 0 8px 30px rgba(200, 178, 139, 0.4); }
+
+        /* --- CTA FINAL --- */
+        .cta-final-container { margin: 20px 0 40px 0; }
+        .cta-final-box { display: block; background: var(--action-gradient); border-radius: 30px; padding: 35px 25px; text-decoration: none; color: var(--cr-black); box-shadow: 0 15px 35px rgba(200, 178, 139, 0.25); transition: 0.4s; position: relative; overflow: hidden; }
+        .cta-final-box:hover { transform: scale(1.02) translateY(-5px); box-shadow: 0 20px 45px rgba(200, 178, 139, 0.4); }
+        .cta-final-title { font-family: var(--font-title); font-size: 1.6rem; margin-bottom: 8px; font-weight: 800; line-height: 1.2; color: var(--cr-black); }
+        .cta-final-sub { font-size: 0.9rem; font-weight: 600; margin-bottom: 25px; color: rgba(0,0,0,0.7); }
+        .cta-final-btn-inner { background: var(--cr-black); color: var(--cr-gold); padding: 15px 35px; border-radius: 50px; font-weight: 600; text-transform: uppercase; font-size: 0.8rem; display: inline-flex; align-items: center; gap: 10px; letter-spacing: 1px;}
+        body.light-theme .cta-final-btn-inner { color: var(--cr-gold); }
+
+        /* --- FOOTER --- */
+        .footer { border-top: 1px solid var(--border-glass); padding-top: 35px; margin-top: 20px; font-size: 0.75rem; color: var(--cr-gray); font-weight: 300; }
+        .footer-icons { display: flex; justify-content: center; gap: 25px; margin-bottom: 20px; }
+        .footer-icons a { font-size: 1.5rem; color: var(--text-main); transition: 0.3s; opacity: 0.8; }
+        .footer-icons a:hover { color: var(--cr-gold); transform: translateY(-4px); opacity: 1; }
+
+    </style>
+</head>
+<body>
+
+    <main class="glass-card">
+        <button class="theme-toggle" onclick="toggleTheme()" aria-label="Alternar Tema"><i class="fas fa-sun"></i></button>
+
+        <header class="profile-section">
+            <img src="logo.jpeg" alt="Logotipo Camila Rocha Personal Training" class="profile-img-top">
+            <h1>Camila Rocha</h1>
+            <h2>Personal Training</h2>
+            <p class="bio-text">Metodologia exclusiva de alto padrão focada em esculpir seu corpo com estética, força e excelência.</p>
+        </header>
+
+        <nav class="action-grid">
+            <a href="https://wa.me/5551981029643" class="btn-action"><i class="fab fa-whatsapp"></i> <span>Contato VIP</span></a>
+            <a href="#planos" class="btn-action"><i class="fas fa-gem"></i> <span>Consultoria</span></a>
+        </nav>
+
+        <section aria-labelledby="sobre-titulo">
+            <div class="section-header"><h3 id="sobre-titulo">A Treinadora</h3></div>
+            <div class="about-card">
+                <img src="https://images.unsplash.com/photo-1594381898411-846e7d193883?q=80&w=1887&auto=format&fit=crop" alt="Foto da Personal Trainer Camila Rocha" class="about-profile-pic">
+                <div class="about-content">
+                    <p class="about-text">
+                        Acredito que o treinamento físico é a forma mais elevada de autocuidado. Minha consultoria foi desenhada para mulheres e homens que buscam <span class="about-highlight">resultados estéticos de excelência</span> sem abrir mão da saúde e da biomecânica perfeita.
+                    </p>
+                    <div class="about-stats">
+                        <div class="stat-item"><div class="stat-number">+7</div><div class="stat-label">Anos Exp.</div></div>
+                        <div class="stat-item"><div class="stat-number">100%</div><div class="stat-label">Personalizado</div></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="planos" aria-labelledby="planos-titulo">
+            <div class="section-header"><h3 id="planos-titulo">Programas Exclusivos</h3></div>
+            
+            <h4 class="plan-category-title">Consultoria Online</h4>
+            <div class="carousel-container">
+                <div class="carousel-track-manual">
+                    
+                    <article class="plan-card">
+                        <div class="plan-title">Essence</div>
+                        <div class="plan-price">R$ 149<span>/mês</span></div>
+                        <div class="gender-badge gender-both"><i class="fas fa-users"></i> Ambos os sexos</div>
+                        <ul class="plan-features">
+                            <li><i class="fas fa-star"></i> Treino no Aplicativo</li>
+                            <li><i class="fas fa-star"></i> Suporte via WhatsApp</li>
+                            <li><i class="fas fa-star"></i> Ajustes Mensais</li>
+                        </ul>
+                        <button onclick="escolherPlano('Consultoria Online Essence')" class="plan-btn">Selecionar</button>
+                    </article>
+
+                    <article class="plan-card featured">
+                        <div class="plan-badge">Premium</div>
+                        <div class="plan-title">Signature (Trimestral)</div>
+                        <div class="plan-price">R$ 397<span>/total</span></div>
+                        <div class="gender-badge gender-both"><i class="fas fa-users"></i> Ambos os sexos</div>
+                        <ul class="plan-features">
+                            <li><i class="fas fa-star"></i> <strong>Acesso Completo Essence</strong></li>
+                            <li><i class="fas fa-star"></i> Direcionamento Estético</li>
+                            <li><i class="fas fa-star"></i> Análise Biomecânica de Vídeo</li>
+                            <li><i class="fas fa-star"></i> Atendimento Prioritário</li>
+                        </ul>
+                        <button onclick="escolherPlano('Consultoria Signature Trimestral')" class="plan-btn">Assinar Premium</button>
+                    </article>
+
+                    <article class="plan-card">
+                        <div class="plan-title">Diamond (Semestral)</div>
+                        <div class="plan-price">R$ 699<span>/total</span></div>
+                        <div class="gender-badge gender-both"><i class="fas fa-users"></i> Ambos os sexos</div>
+                        <ul class="plan-features">
+                            <li><i class="fas fa-star"></i> <strong>Consultoria de Elite</strong></li>
+                            <li><i class="fas fa-star"></i> Reunião de Alinhamento</li>
+                            <li><i class="fas fa-star"></i> Ajustes Quinzenais (se necessário)</li>
+                            <li><i class="fas fa-star"></i> Maior Custo-Benefício</li>
+                        </ul>
+                        <button onclick="escolherPlano('Consultoria Diamond Semestral')" class="plan-btn">Assinar Diamond</button>
+                    </article>
+
+                </div>
+            </div>
+
+            <h4 class="plan-category-title" style="margin-top: 25px;">Personal Presencial</h4>
+            <div class="carousel-container">
+                <div class="carousel-track-manual">
+                    
+                    <article class="plan-card">
+                        <div class="plan-title">Presencial 2x</div>
+                        <div class="plan-price">Consulte</div>
+                        <div class="gender-badge gender-women"><i class="fas fa-female"></i> Exclusivo Mulheres</div>
+                        <ul class="plan-features">
+                            <li><i class="fas fa-star"></i> 2 Aulas por Semana</li>
+                            <li><i class="fas fa-star"></i> Correção Biomecânica Fina</li>
+                            <li><i class="fas fa-star"></i> Avaliação Física Inclusa</li>
+                            <li><i class="fas fa-star"></i> App para Dias Extras</li>
+                        </ul>
+                        <button onclick="escolherPlano('Personal Presencial 2x na semana')" class="plan-btn">Saber Mais</button>
+                    </article>
+
+                    <article class="plan-card featured">
+                        <div class="plan-badge">O mais buscado</div>
+                        <div class="plan-title">Presencial 3x</div>
+                        <div class="plan-price">Consulte</div>
+                        <div class="gender-badge gender-women"><i class="fas fa-female"></i> Exclusivo Mulheres</div>
+                        <ul class="plan-features">
+                            <li><i class="fas fa-star"></i> 3 Aulas por Semana</li>
+                            <li><i class="fas fa-star"></i> <strong>Resultados Acelerados</strong></li>
+                            <li><i class="fas fa-star"></i> Avaliação Física Premium</li>
+                            <li><i class="fas fa-star"></i> Direcionamento Completo</li>
+                        </ul>
+                        <button onclick="escolherPlano('Personal Presencial 3x na semana')" class="plan-btn">Garantir Vaga</button>
+                    </article>
+
+                    <article class="plan-card">
+                        <div class="plan-title">Presencial 4x</div>
+                        <div class="plan-price">Consulte</div>
+                        <div class="gender-badge gender-women"><i class="fas fa-female"></i> Exclusivo Mulheres</div>
+                        <ul class="plan-features">
+                            <li><i class="fas fa-star"></i> 4 Aulas por Semana</li>
+                            <li><i class="fas fa-star"></i> Acompanhamento de Atleta</li>
+                            <li><i class="fas fa-star"></i> Periodização de Alta Intensidade</li>
+                            <li><i class="fas fa-star"></i> Vagas Limitadíssimas</li>
+                        </ul>
+                        <button onclick="escolherPlano('Personal Presencial 4x na semana')" class="plan-btn">Saber Mais</button>
+                    </article>
+
+                </div>
+            </div>
+            
+            <div class="section-header" style="margin-top: 40px;"><h3 id="locais-titulo">Locais de Atendimento & Valores</h3></div>
+            
+            <div class="location-card">
+                <h4 class="location-title">Academia Neweel</h4>
+                <table class="price-table">
+                    <thead>
+                        <tr>
+                            <th>Freq.</th>
+                            <th>Mês</th>
+                            <th>Aula</th>
+                            <th>Pacote</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>3x/sem</td>
+                            <td>12 aulas</td>
+                            <td>R$ 75</td>
+                            <td class="highlight-price">R$ 900</td>
+                        </tr>
+                        <tr>
+                            <td>2x/sem</td>
+                            <td>08 aulas</td>
+                            <td>R$ 75</td>
+                            <td class="highlight-price">R$ 600</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="location-card">
+                <h4 class="location-title">Academia RAR • Cristal • Dunnafit</h4>
+                <table class="price-table">
+                    <thead>
+                        <tr>
+                            <th>Freq.</th>
+                            <th>Mês</th>
+                            <th>Aula</th>
+                            <th>Pacote</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>3x/sem</td>
+                            <td>12 aulas</td>
+                            <td>R$ 70</td>
+                            <td class="highlight-price">R$ 840</td>
+                        </tr>
+                        <tr>
+                            <td>2x/sem</td>
+                            <td>08 aulas</td>
+                            <td>R$ 70</td>
+                            <td class="highlight-price">R$ 560</td>
+                        </tr>
+                        <tr>
+                            <td>1x/sem</td>
+                            <td>04 aulas</td>
+                            <td>R$ 70</td>
+                            <td class="highlight-price">R$ 280</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="plans-cta-footer">
+                <a href="https://wa.me/5551981029643" class="link-cta">Dúvida sobre os locais ou programas? Fale comigo <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </section>
+
+        <section aria-labelledby="resultados-titulo">
+            <div class="section-header"><h3 id="resultados-titulo">Transformações</h3></div>
+            <div class="carousel-container">
+                <div class="carousel-track-manual">
+                    <article class="result-card">
+                        <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?q=80&w=2070&auto=format&fit=crop" alt="Resultado de Hipertrofia Feminina">
+                        <div class="result-overlay">
+                            <span class="result-badge">Estética Feminina</span>
+                            <div class="result-desc">Construção de glúteos e definição abdominal com protocolo de 12 semanas.</div>
+                        </div>
+                    </article>
+                    <article class="result-card">
+                        <img src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?q=80&w=2070&auto=format&fit=crop" alt="Resultado de Emagrecimento">
+                        <div class="result-overlay">
+                            <span class="result-badge">Emagrecimento</span>
+                            <div class="result-desc">Redução de 12% de gordura corporal mantendo a massa magra.</div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section aria-labelledby="feedback-titulo">
+            <div class="section-header"><h3 id="feedback-titulo">Experiência das Alunas</h3></div>
+            <div class="carousel-wrapper-auto">
+                <div class="carousel-track-feedback">
+                    <article class="feedback-card"><div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><p class="feedback-text">"Nunca tive um acompanhamento tão minucioso. O treino é elegante, direto ao ponto e os resultados são visíveis."</p><span class="feedback-author">Marina T.</span></article>
+                    <article class="feedback-card"><div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><p class="feedback-text">"A Camila é excepcional. Corrigiu posturas que me incomodavam há anos e desenhou meu corpo."</p><span class="feedback-author">Letícia B.</span></article>
+                    <article class="feedback-card"><div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><p class="feedback-text">"Investimento perfeito. O aplicativo é super premium e as aulas da Camila são muito claras."</p><span class="feedback-author">Sophia C.</span></article>
+                    <article class="feedback-card"><div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><p class="feedback-text">"Nunca tive um acompanhamento tão minucioso. O treino é elegante, direto ao ponto e os resultados são visíveis."</p><span class="feedback-author">Marina T.</span></article>
+                </div>
+            </div>
+        </section>
+
+        <section aria-labelledby="form-titulo">
+            <div class="section-header" style="margin-top: 40px;"><h3 id="form-titulo">Aplicação para Consultoria</h3></div>
+            <div class="schedule-form">
+                
+                <div class="form-group">
+                    <label class="form-label" for="planSelect">Plano de Interesse</label>
+                    <select id="planSelect" class="form-select">
+                        <option value="Ainda não sei / Quero recomendação" selected>Ainda não sei / Quero recomendação</option>
+                        <optgroup label="Consultoria Online (Ambos)">
+                            <option value="Online - Essence (Mensal)">Online - Essence (Mensal)</option>
+                            <option value="Online - Signature (Trimestral)">Online - Signature (Trimestral)</option>
+                            <option value="Online - Diamond (Semestral)">Online - Diamond (Semestral)</option>
+                        </optgroup>
+                        <optgroup label="Presencial (Apenas Mulheres)">
+                            <option value="Presencial 2x/semana">Presencial 2x/semana</option>
+                            <option value="Presencial 3x/semana">Presencial 3x/semana</option>
+                            <option value="Presencial 4x/semana">Presencial 4x/semana</option>
+                        </optgroup>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="clientName">Seu Nome</label>
+                    <input type="text" id="clientName" class="form-input" placeholder="Como gosta de ser chamada(o)?">
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label class="form-label" for="clientAge">Idade</label>
+                        <input type="number" id="clientAge" class="form-input" placeholder="Ex: 28">
+                    </div>
+                     <div class="form-group">
+                        <label class="form-label" for="levelSelect">Nível Atual</label>
+                        <select id="levelSelect" class="form-select">
+                            <option value="Iniciante">Iniciante</option>
+                            <option value="Intermediário">Intermediário</option>
+                            <option value="Avançado">Avançado</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="healthInput">Histórico de Lesões / Dores</label>
+                    <textarea id="healthInput" class="form-input" placeholder="Relate se há algum desconforto ou restrição médica."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="goalInput">Qual a sua meta estética/física ideal?</label>
+                     <textarea id="goalInput" class="form-input" placeholder="Ex: Desejo reduzir celulite e ganhar volume de glúteo..."></textarea>
+                </div>
+
+                <button onclick="enviarAnamnese()" class="btn-schedule">
+                    <i class="fab fa-whatsapp"></i> Enviar Avaliação
+                </button>
+            </div>
+        </section>
+
+        <div class="cta-final-container">
+            <a href="https://wa.me/5551981029643" class="cta-final-box">
+                <div class="cta-final-title">O padrão de treino que você merece.</div>
+                <p class="cta-final-sub">Agende sua avaliação e inicie o projeto da sua vida.</p>
+                <div class="cta-final-btn-inner">
+                    <i class="fab fa-whatsapp"></i> Falar com Camila
+                </div>
+            </a>
+        </div>
+
+        <footer class="footer">
+            <div class="footer-icons">
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+            </div>
+            <p>© 2026 Camila Rocha Personal Training.</p>
+            <p style="margin-top:8px; font-size:0.6rem; letter-spacing: 1px;">POWERED BY COUTINHO TECH</p>
+        </footer>
+    </main>
+
+    <script>
+        function toggleTheme() {
+            const body = document.body;
+            body.classList.toggle('light-theme');
+            const icon = document.querySelector('.theme-toggle i');
+            if(body.classList.contains('light-theme')){ 
+                icon.classList.replace('fa-sun', 'fa-moon'); 
+                localStorage.setItem('theme-cr', 'light'); 
+            } else { 
+                icon.classList.replace('fa-moon', 'fa-sun'); 
+                localStorage.setItem('theme-cr', 'dark'); 
+            }
+        }
+        
+        if(localStorage.getItem('theme-cr') === 'light') { 
+            document.body.classList.add('light-theme'); 
+            document.querySelector('.theme-toggle i').classList.replace('fa-sun', 'fa-moon'); 
+        }
+
+        function enviarAnamnese() {
+            const plano = document.getElementById('planSelect').value;
+            const nome = document.getElementById('clientName').value;
+            const idade = document.getElementById('clientAge').value;
+            const nivel = document.getElementById('levelSelect').value;
+            const saude = document.getElementById('healthInput').value || "Nenhuma restrição relatada.";
+            const objetivo = document.getElementById('goalInput').value;
+            
+            if(!nome || !idade || !objetivo) { 
+                alert("Por gentileza, preencha seu Nome, Idade e Objetivo para prosseguirmos."); 
+                return; 
+            }
+            
+            const mensagem = `Olá Camila! Preenchi a avaliação para a consultoria:%0A%0A*--- PERFIL ---*%0A*Nome:* ${nome}%0A*Idade:* ${idade} anos%0A*Nível:* ${nivel}%0A%0A*--- PLANO DESEJADO ---*%0A${plano}%0A%0A*--- SAÚDE ---*%0A${saude}%0A%0A*--- OBJETIVO ---*%0A${objetivo}%0A%0AAguardo seu contato!`;
+            
+            window.open(`https://wa.me/5551981029643?text=${mensagem}`, '_blank');
+        }
+
+        function escolherPlano(plano) {
+            const mensagem = `Olá Camila! Gostaria de saber mais informações sobre o pacote: *${plano}*.`;
+            window.open(`https://wa.me/5551981029643?text=${mensagem}`, '_blank');
+        }
+    </script>
+</body>
+</html>
